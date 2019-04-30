@@ -1,0 +1,753 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# DS/ML/AI Challenge "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Welcome to the CodeDoor DS/ML/AI Challenge!\n",
+    "In this notebook, some template code has already been provided for you, and you will need to implement additional functionality to successfully complete this challenge. Instructions will be provided for each section and the specifics of the implementation are usually marked in the code block with a 'TODO' statement. Please be sure to read the instructions carefully!\n",
+    "\n",
+    "When you copy a snippet of code, you should credit the source and explain what the code exactly does in comments. Understanding your code is very important! So it is expected that you can demonstrate that you have understood what you have brought from other sources. Do not forget that plagiarism is checked by challenge reviewers.\n",
+    "\n",
+    ">**Note:** Code cells can be executed using the **Shift + Enter** keyboard shortcut"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Task 1: List vs. NumPy Array\n",
+    "\n",
+    "In the first section of this challenge, you will be working with different types of data structures that can be used in Python. We will try to show how to work with them and what are their advantages and disadvantages."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Implementation:  Find length of `my_list`\n",
+    "\n",
+    "Given is a list of random integer numbers in the range of 50 to 100 called `my_list`. Try to print the length of the list.\n",
+    "\n",
+    "**Hint:** In Python, there's a built-in function which does this.\n",
+    "\n",
+    "__Note:__ `None`values should be modified with your own implementation."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_list = [62, 53, 69, 84, 83, 80, 98, 74, 70, 92, 68, 71, 54, 87, 85, 88, 63, 61, 66, 99]\n",
+    "\n",
+    "# TODO: Get length of a list\n",
+    "def list_length(input_list):\n",
+    "    # Your code goes here!\n",
+    "    return None \n",
+    "\n",
+    "# Printing the length of the list\n",
+    "print(list_length(my_list))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Implemention: Find min and max of  list\n",
+    "\n",
+    "For your next code implementation, you will implement a function that takes a list of integers and returns the minimum and maximum element of it. Your function should return a list of two elements that contains the minimum and maximum of a given list.\n",
+    "\n",
+    "**Example:** `[1,2,25,5,4,3,14]` returns `[1,25]`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random\n",
+    "\n",
+    "#TODO: Find min and max of a list\n",
+    "def list_max_min(input_list): \n",
+    "    #Your code goes here!\n",
+    "    return [None,None]\n",
+    "\n",
+    "# Printing min and max of random numbers in a list\n",
+    "result = list_max_min(my_list)\n",
+    "print(\"Minimum number  {}\".format(result[0]))\n",
+    "print(\"Maximum number: {}\".format(result[1]))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Arithmetic and Statistical Operations on lists\n",
+    "\n",
+    "For this part, multiply each element of the list defined in the previous question with a constant floating point `coeff` defined in the following coding cell. Store the result of multiplication in a new list called `res_list`.\n",
+    "\n",
+    "Then take the mean of the resulting list “`res_list`” elements and print it."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# TODO: multiply each element of the list with the given coeff\n",
+    "\n",
+    "coeff = 7.231671067280546 # The constant to be multiplied to each element of the list \n",
+    "\n",
+    "# Your code goes here!\n",
+    "res_list = None\n",
+    "\n",
+    "# Print the result of the multiplication \n",
+    "print(res_list)\n",
+    "\n",
+    "# TODO: take the average of the elements of the list\n",
+    "\n",
+    "# Your code goes here!\n",
+    "mean_res_list = None\n",
+    "\n",
+    "# Showing the result of taking the average\n",
+    "print(mean_res_list)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Working with NumPy Arrays:\n",
+    "\n",
+    "In this part, we are going to make a comparison between two data structures, namely between Python lists and NumPy arrays. For conducting mathematical and statistical operations on the elements, NumPy arrays are prefered over Python lists, as they provide an efficient storage and some useful predefined functions.\n",
+    "\n",
+    "In the code cell below, you will need to implement the following function called `math_array`:\n",
+    "\n",
+    "The function takes a NumPy array as the input and returns a list with 3 elements:\n",
+    "  * First element is the result of multiplication of the array with the coefficient `coeff`. This element is a NumPy array.\n",
+    "  * Second element is a list with a length of 2 elements with this format: [`min_array`, `max_array`]\n",
+    "  * For the third element: take the average of the elements in NumPy array stored in the first element. This third element is a float number. \n",
+    "\n",
+    "**Hint**: There is a predefined function for calculating the mean of a NumPy array. You do not have to implement the formula by yourself.\n",
+    "    \n",
+    "__Note:__ As you may have realized, the elements of the return list, can get different types of datastructures and variables. Here a NumPy array, a list, and a single float number are the elements of the return list."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Import NumPy library necessary for this part \n",
+    "import numpy as np\n",
+    "\n",
+    "my_array = np.array(my_list) # The NumPy array format of the list is obtained\n",
+    "\n",
+    "def math_array(input_array):\n",
+    "    coeff = 7.231671067280546 # The constant to be multiplied \n",
+    "    # Your code goes here!\n",
+    "    res = [None, None, None]\n",
+    "    return res \n",
+    "\n",
+    "# Displaying the result of calling the implemented function on my_array\n",
+    "print(math_array(my_array))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### NumPy Arrays and  files\n",
+    "\n",
+    "In this section, you will read a CSV file into a NumPy array. The file is in the “data” folder of the repository. The file name is `grades.csv`. [ Here](https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.genfromtxt.html) is the link of the function that you require to read a CSV file and store it in a NumPy array. Try to load the file `grades.csv` into a NumPy array.\n",
+    "\n",
+    "Now that you have successfully loaded the CSV file into a NumPy array, first try to understand how many grades are there in the array and store the resuly into the variable `number_of_grades`.\n",
+    "\n",
+    "__Hint:__ There is a predefined function for determining the size of a NumPy array.\n",
+    "\n",
+    " "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# TODO: load \"grades.csv\" as NumPy array and display the size of the array\n",
+    "\n",
+    "\n",
+    "# Import \"grades.csv\" file and store as NumPy array\n",
+    "grades_np = None\n",
+    "\n",
+    "# Print the grades\n",
+    "print(grades_np)\n",
+    "\n",
+    "\n",
+    "number_of_grades = None # A variable for taking the size of the array\n",
+    "\n",
+    "# Display the size of the array\n",
+    "print(\"The number of grades are: \" + str(number_of_grades))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Boolean Indexing\n",
+    "\n",
+    "In the following section try to split the array `grades_np` from the previous part, into two NumPy arrays: `even_grades` and `odd_grades`. `even_grade` and `odd_grades` are names of the arrays which hold the even and odd grades, respectively. Print the arrays and their size.\n",
+    "\n",
+    "__Hint:__ Boolean indexing of the NumPy arrays makes the splitting process easier. [Here](https://docs.scipy.org/doc/numpy-1.13.0/user/basics.indexing.html) is the link to the concept of *boolean* *(mask)* indexing.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# TODO: Split the NumPy array into even and odd parts\n",
+    "\n",
+    "# Your code goes here!\n",
+    "even_grades = None\n",
+    "odd_grades = None\n",
+    "even_grades_size = None\n",
+    "odd_grades_size = None\n",
+    "\n",
+    "# Display the resulted arrays from the splitting process\n",
+    "print(\"The even grades are: \"+ str(even_grades))\n",
+    "print(\"The odd grades are: \"+ str(odd_grades))\n",
+    "\n",
+    "# Display the size of the arrays\n",
+    "print(\"The number of even grades is: \" + str(even_grades_size))\n",
+    "print(\"The number of odd grades is: \" + str(odd_grades_size))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Arithmetic Operations and Mask Indexing\n",
+    "\n",
+    "For this part, use the `even_grades` from the previous section and take the average. Then try to understand which indices have greater values than the average. What are the values?\n",
+    "\n",
+    "__Example:__ For an array with these elements: `[2,3,5,6,3,5]`, the  average value is `4`:\n",
+    "\n",
+    "The indices of the elements with the values greater than the average: `[2 3 5]`\n",
+    "\n",
+    "The values greater than the average are:  `[5 6 5]`\n",
+    "\n",
+    "__Hint:__ For getting the indices of non-zero elements of an array, you can use the function [here](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.nonzero.html) \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# TODO: Take the average of the even gardes and specify the indexes with the elements larger than the mean\n",
+    "\n",
+    "# Your code goes here!\n",
+    "\n",
+    "mean_even_grades = None # The variable for holding the mean value of the even grades\n",
+    "\n",
+    "# Display the taken mean\n",
+    "print(\"The mean value of the even grades is: \" + str(mean_even_grades))\n",
+    "\n",
+    "greater_than_mean_inds = None # A list of indexes with the values larger than the \"mean_even_grades\"\n",
+    "\n",
+    "# Displaying the indices\n",
+    "print(\"Indices with the values greater than the mean are: \" + str(greater_than_mean_inds))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Sorting, Arithmetic and Statistical Operations on NumPy arrays\n",
+    "\n",
+    "Sort the array of `odd_grades` from the earlier section in an ascending order. Do the same for the `even_grade` with the reverse order. Try to get the `median` of the `odd_grades`. Then calculate the difference of the `median` and `mean` of `odd_grades`. Calculate the Standard Deviation of `odd_grades`. \n",
+    "\n",
+    "__Hint:__ Calculate the absolute value, the difference of the median and mean value. You can use the `abs` built-in function."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# TODO: Sort \"odd_grades\" in an ascending and \"even_grades\" in a descending order\n",
+    "\n",
+    "sorted_odd_grades = None \n",
+    "\n",
+    "reverse_sorted_even_grades = None\n",
+    "\n",
+    "# Printing the sorted arrays:\n",
+    "print(sorted_odd_grades)\n",
+    "print(reverse_sorted_even_grades)\n",
+    "\n",
+    "# Variables which hold median, mean and the absolute difference of median and mean\n",
+    "median_odd_grades = None\n",
+    "mean_odd_grades = None\n",
+    "mean_median_diff = None\n",
+    "\n",
+    "# Display median, mean, difference of them\n",
+    "print(\"The median of the odd grades is: \" + str(median_odd_grades))\n",
+    "print(\"The mean of the odd grades is: \" + str(mean_odd_grades))\n",
+    "print(\"The difference of median and the mean of the odd grades is: \" + str(mean_median_diff))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Multi-Dimensional NumPy Arrays\n",
+    "\n",
+    "Split the array `grades_np` into 4 rows and save it into a new array `splited_grades_np`.  Take the median, mean, and the standard deviation (std) of each row (along x-axis). In each case (median, mean, and std) you are supposed to obtain a NumPy array, each containing  4 elements. The elements are either float or integer numbers (think about it Why?). Which rows have the greatest difference between mean and median?\n",
+    "\n",
+    "Finally try to sort the grades of all the rows and save them in a new NumPy array `sorted_splited_grades`. Save the top 3 grades of all rows in a new NumPy array `best_grades`. (After sorting, you will just need to do a simple indexing and get the three last columns of each row). Note that the `best_grades` will have a shape of `(4,3)` (e.g. 4 rows and 3 columns).\n",
+    "\n",
+    "\n",
+    "__Hint 1:__ In order to reshape an array into a new array with different dimentions, you can use [this link](https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.reshape.html). \"`splited_grades_np`\" will have a shape like this:\n",
+    "\n",
+    "[[row0]  \n",
+    "[row1]  \n",
+    "[row2]  \n",
+    "[row3]]\n",
+    "\n",
+    "__Hint 2:__ To get the index of the maximum element of the an array use: [`argmax`](https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.argmax.html)\n",
+    "\n",
+    "__Important Note:__ *Understand what is the difference of `np.reshape(my_array,(a,b))` and `my_array.reshape(a,b)`.* Which one should be used when we want to keep the original array intact? Consider the difference while writing the code."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# TODO: Split the \"grades_np\" into an array with 4 rows, take the mean, median, std of each rwo. \n",
+    "\n",
+    "# Variables for holding the mean, median, and std\n",
+    "means = None\n",
+    "medians = None\n",
+    "stds = None\n",
+    "mean_median_diff_ind = None # The row which has the largest difference between mean and median\n",
+    "\n",
+    "# Display the taken values\n",
+    "print(\"mean values: \" + str(means))\n",
+    "print(\"median values: \" + str(medians))\n",
+    "print(\"std values: \" + str(stds))\n",
+    "\n",
+    "# The NumPy arrays for holding the new splited array with the shape of (4,:), the sorted grades for each row, \n",
+    "# and the top 3 grades for each row\n",
+    "splited_grades_np = None\n",
+    "sorted_splited_grades = None\n",
+    "best_grades = None\n",
+    "\n",
+    "# Display the Best score\n",
+    "print(best_grades)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***\n",
+    "\n",
+    "## Task 2: Data Visualization\n",
+    "\n",
+    "Sometimes data does not make sense until you can look at in a visual form, such as with charts and plots. Being able to quickly visualize our data samples is an important skill in DS/ML/AI.\n",
+    "\n",
+    "[`Matplotlib`](https://matplotlib.org/) is the library that you will use for solving the challenges of this part. This library is supposably installed on your machine or the environment that you are working with.\n",
+    "\n",
+    "For this part, we will continue use `even_grades` from an earlier task.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Bar plot\n",
+    "\n",
+    "Create a bar plot for visualising the grades. A scientific plot has a title and labeled axes. In the case of `even_grades` bar plot, label the horizontal axis \"Student Index\" and the vertical axis  \"grade\". \"Student Index\" is a list of consecutive integer numbers starting with one. For generating such a list, search for `range`. In order to make it clear to which student each bar belongs to, please take a look at `xticks`. Using this function, you can assign each 2 students for instance a tick. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Import the necessary packages and modules\n",
+    "\n",
+    "# Your code goes here!\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Histogram \n",
+    "\n",
+    "Try to generate a histogram of the `even_grades` with 9 bins on the horizontal axis. Do not forget the labels and the plot title.\n",
+    "* Label the horizontal axis: \"grade bins\".\n",
+    "* Label the vertical axis: \"num of students\".\n",
+    "* Title of the plot: \"grades histogram\"."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Your code goes here!\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Subplots __(Bonus):__ \n",
+    "\n",
+    "Now imagine that we intend to make a comparison between the grades of two classes composed of 8 students each. Consider the first 8 elements of the array discussed in the first question as the list of grades of the class 0 and the second 8 grades as the list of the grades of the second class, class 1. In a single plot try to show the grades of both classes. \n",
+    "\n",
+    "***Hint:*** In order to have multiple plots in a chart, use the [`subplot`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot.html) without any input argument. Note that the bars that you are supposed to obtain have their own color and their own specific [`legend`](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html). The horizontal axis includes a sequence of integer numbers from 0 to 7. The vertical is the grade. Let the title of the figure be \"Sample grades in two sets\". Label the bar of the first set \"`setA`\" and of the second set \"`setB`\". An appropriate value for the bar width in our problem is `0.3`. It is preferable that each bar pair be symmetric around the ticks in x-axis. This requires shifting the two bar sets by `width/2` to different directions. The final figure should look similar to this:\n",
+    "\n",
+    "![A sample plot](img/SamplePlot.jpg)\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Your code goes here!\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***\n",
+    "\n",
+    "## Task 3: Pandas Dataframe\n",
+    "\n",
+    "### Getting Started\n",
+    "\n",
+    "Just like many other libraries, Pandas has also its own [website](http://pandas.pydata.org/) and [documentation](http://pandas.pydata.org/pandas-docs/stable/) page. It is possible to [read](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html) a CSV file and store it in a Pandas dataframe. Create a dataframe and try to load the CSV file (\"`Ecommerce-Customers.csv`\") located in the data directory of the repository into it. Name this dataframe as `input_df`. As the name of the CSV file implies, this is a dataset derived from an E-commerce business."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# TODO: Load the Ecommerce-Customers.csv file into a panda dataframe called \"input_df\"\n",
+    "\n",
+    "import pandas as pd \n",
+    "\n",
+    "# Your code goes here!\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Plot dataframe as table\n",
+    "\n",
+    "In order to display dataframes as tables, you can use the function `display`. Try to understand the schema of the dataframe (The name of the columns that the data has). In another word, what features each sample has. A sample of the table you should see is shown below:\n",
+    "\n",
+    "![title](img/sampleTable.jpg)\n",
+    "\n",
+    "Now that you have the data in a dataframe, try to get the [`shape`](https://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.DataFrame.shape.html) of it.\n",
+    "\n",
+    "Use [`dtypes`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.dtypes.html) to display the name of the columns (also known as \"features\") and the type of each one."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# TODO: Get the shape of the input_df\n",
+    "\n",
+    "# Variable for holding the shape\n",
+    "input_shape = [None]\n",
+    "\n",
+    "# Your code goes here!\n",
+    "\n",
+    "# Display the name of the columns and the type of the values\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Working with big data puts a restriction on displaying every single row. All the samples are not required to be shown (It is also not possible!). A good practice is to limit the number of samples to be displayed. Which function in Pandas allows us to do so? Try to display the first 5 rows of the data frame."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# TODO: Display top 5 rows of input_df\n",
+    "\n",
+    "# Your code goes here!\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Average Time spent on Website and App\n",
+    "\n",
+    "Consider the following scenario: our employer wants to know the user's average time spent on the app and on the website. To answer this question, we need to take the mean of two columns: time spent on the app (app_mean), and time spent on the website (web_mean). To have a measure of reliability, our employer also wants to know the standard deviation of these two measures. Write a `df_math` function which returns a list of  two elements, each of which has two elements by itself. The resulted list should be in the following format:`[[app_mean, app_std], [web_mean, web_std]]`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# TODO: Write function the mean and std of app and website column\n",
+    "\n",
+    "def df_math():\n",
+    "    \n",
+    "    # Your code goes here!\n",
+    "    \n",
+    "    res = [None, None] # Format: [[app_mean, app_std], [web_mean, web_std]]\n",
+    "    \n",
+    "    return res \n",
+    "\n",
+    "# Display the return value of the function\n",
+    "print(df_math())"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Finding max and the max_ID\n",
+    "\n",
+    "Next, you are tasked to identify the email address of the user who has spent the longest amount of time on the app and on the website. \n",
+    "Implement a function `max_finder` which returns: `[email_app, max_time_app, email_web, max_time_web]` where `email_app` is the  email address of the user who has spent the longest time using the app and `max_time_app` is the time that he/she has spent on it, and where `email_web` is the email address of the user who has spent the longest time on the website, and max_time_web is the time he/she has spent on it..\n",
+    "\n",
+    "__Note:__ To write this function, you are expected to understand the difference between [`loc`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.loc.html) and [`iloc`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.iloc.html) as well as [`max`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.max.html)and [`idxmax`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.idxmax.html). "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "def max_finder():\n",
+    "    # Your code goes here!\n",
+    "     return [None, None, None, None] # format explained above\n",
+    "    \n",
+    "result = max_finder()\n",
+    "\n",
+    "# Displaying the result\n",
+    "print(\"Email address: {}\".format(result[0]))\n",
+    "print(\"Max time spent on the app: {}\".format(result[1]))\n",
+    "print(\"Email address: {}\".format(result[2]))\n",
+    "print(\"Max time spent on the web: {}\".format(result[3]))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Sort and Selection\n",
+    "\n",
+    "In this section we will calculate a score and append it as a new column to the dataframe `input_df`. \n",
+    "\n",
+    "Calculate the score using the following formula: \n",
+    "$ \\text{AVERAGE SESSION LENGTH} \\cdot \\text{MEMBERSHIP LENGTH}$\n",
+    "\n",
+    "For the `best_score_finder` function in the code cell below, you will need to implement the following:\n",
+    "* Calculate score and assign it to a new column called 'scr'.\n",
+    "* [sort](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.sort_values.html) the users based on score value and select the top 5 users with the highest score.\n",
+    "* return value is a dataframe with 5 rows selected from the sorted dataframe. \n",
+    "\n",
+    "Then call the function with the dataframe `input_df` as input and finally store the result in a variable called `best_scores`\n",
+    "To verifiy your implementation, you may display the `best_score`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def best_score_finder(): # Function for getting the costumers with the best scores\n",
+    "    # Your code goes here!\n",
+    "    return None\n",
+    "\n",
+    "\n",
+    "# Displaying the results of function with input_df as input\n",
+    "best_scores = best_score_finder() # input_df\n",
+    "display(best_scores)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Sort `input_df` using the values in the column \"`Yearly Amount Spent`\". Return the top 5 rows. Store the results of the function in a variable called “`best_yearly_spent`”."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def best_yearly_spent_finder():\n",
+    "    # Your code goes here!\n",
+    "    return None # Return value is of type \"panda dataframe\" with 5 rows\n",
+    "\n",
+    "best_yearly_spent = best_yearly_spent_finder() # input_df \n",
+    "display(best_yearly_spent)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Finding Common Elements\n",
+    "\n",
+    "Now that you have found the top users based on two criteria (`scr` and `yearly amount spent`), we want to find the intersection of the two dataframes. We want to find the email addresses of the users that exist in both dataframes. \n",
+    "\n",
+    "___Hint:___ Take a look at `merg` function for panda dataframe and `how='inner'`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def comparisor(a,b):\n",
+    "    # Your code goes here!\n",
+    "    return None  # a dataframe that contains the rows that exist in both dataframes a,b\n",
+    "\n",
+    "comparisor(best_scores, best_yearly_spent)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***\n",
+    "\n",
+    "## Task 4: Regression\n",
+    "\n",
+    "### Preparing Data and Splitting into Train and Test\n",
+    "\n",
+    "In this part of the challenge we will do a supervised machine learning task. This requires us to split the data into train and test samples. This raises the need to make use of a new library called \"[`scikit-learn`](http://scikit-learn.org/stable/index.html)\". Using the functionality that this library gives, we can split our data into a train and test set. The selection of the samples to be as train or test data is done randomly. To keep the train and test samples the same for all the candidates, we have done the split and save the training and test set into two separate CSV files (located in the data directory of the repository). Just for your information, in order to split your data into training and test set you have multiple options. Among them are generating a random boolean NumPy array with a built-in function [`rand`](https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.random.rand.html) (with the length of the number of rows) and doing a mask indexing (like what we had for the NumPy arrays) or a predefined function in `scikit-learn` called [`train_test_split`](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html). It is an important and typical step to be taken in supervised machine learning tasks. Typically something around **70%** of the whole samples are assigned to the training set and the remaining would be test set.\n",
+    "\n",
+    "Before we splitted the `input_df` into train and test, we had [selected](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.select_dtypes.html) the numerical features and formed a new dataframe \"`num_df`\". In the cell below, try to form this dataframe."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# TODO: Selecting the numerical columns of \"input_df\"\n",
+    "\n",
+    "# Your code goes here\n",
+    "num_df = [None]\n",
+    "\n",
+    "# Print the result\n",
+    "display(num_df)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Model Development\n",
+    "\n",
+    "We want to develop a model which can do a linear regression on the test dataset based on the information it got from the training set. A regression is making a prediction about the continuous value of a specific measure of the test data having the information from the training data. Using the [linear regression model](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) that scikit learn provides, develop a linear regression model on the \"`Yearly Amount Spent`\" of the test samples. The return value of the function predict_model is supposed to be the \"[`mean-squared-error`](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html)\" between the true target values of the test set and the ones that the model has predicted.\n",
+    "\n",
+    "___Hint:___ The very first step to be taken is to load the training and test set from their csv files. All the columns of the sets except for the \"Yearly Amount Spent\" are considered as feature space.  \"`Yearly Amount Spent`\" column is the target to be predicted.\n",
+    "\n",
+    "__Note:__ The input to the `function predict_model` are two dataframes: the training (for the first argument) and test data (for the other one). Within the function, first you have to split the target values from the features (separate the column “`Yearly Amount Spent`” from the other columns) and then feed them  (feature values and the target values) to the linear regression model. `fit` and `predict` are the methods in `LinearRegression` that you may use.\n",
+    "\n",
+    "__Important Note:__ As mentioned earlier, the prediction for the continuous values is called \"regression\". If our model predicts some discrete values known as labels for the test set from the training set, the task is called \"classification\". Classification is a supervised machine learning task which can be considered as a \"mapping\" from the feature space to some \"discrete labels\". You will learn more about the supervised and unsupervised tasks in your future online courses."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Develop a linear regression model and return the mean squared error on the test set \n",
+    "\n",
+    "def predict_model(train_set, test_set):\n",
+    "    \n",
+    "    res = [None]\n",
+    "    \n",
+    "    # Your code goes here!\n",
+    "    \n",
+    "    return res\n",
+    "\n",
+    "err = predict_model(train_data, test_data)\n",
+    "\n",
+    "print(\"The mean square error of the model on the test set is: {}\".format(err))"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
